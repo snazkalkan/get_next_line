@@ -6,7 +6,7 @@
 /*   By: skalkan <skalkan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 05:06:40 by skalkan           #+#    #+#             */
-/*   Updated: 2024/12/26 05:08:37 by skalkan          ###   ########.fr       */
+/*   Updated: 2025/03/21 13:05:47 by skalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*read_line(char *line, int fd)
 		{
 			buffer[read_len] = '\0';
 			temp = line;
-			line = ft_strjoin(line, buffer);
+			line = ft_strjoin2(line, buffer);
 			free(temp);
 		}
 	}
@@ -89,5 +89,10 @@ char	*get_next_line(int fd)
 		return (NULL);
 	next_line = ft_get_next_line(line);
 	line = new_line(line);
+	if (!line || line[0] == '\0' || line[0] == '\n')
+	{
+		free(line);
+		line = NULL;
+	}
 	return (next_line);
 }

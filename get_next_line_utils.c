@@ -6,7 +6,7 @@
 /*   By: skalkan <skalkan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 05:07:23 by skalkan           #+#    #+#             */
-/*   Updated: 2024/12/26 05:07:54 by skalkan          ###   ########.fr       */
+/*   Updated: 2025/02/04 16:44:09 by skalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin2(char *s1, char *s2)
 {
 	char	*str;
 	size_t	len1;
